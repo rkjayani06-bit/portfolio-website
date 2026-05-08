@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rkjay | Portfolio — Developer & Creator</title>
+    <meta name="description"
+        content="Personal portfolio of Rkjay — showcasing skills, projects, and creative development work.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Animated Background Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-ring"></div>
+            <span class="preloader-text">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>Jayani<span class="logo-bracket"> /&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="#contact" class="nav-cta">Let's Talk</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Available for opportunities
+                </div>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Jayani</span>
+                </h1>
+                <div class="hero-subtitle">
+                    <span class="typing-prefix">I build </span>
+                    <span class="typing-text" id="typingText"></span>
+                    <span class="typing-cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    A passionate developer crafting beautiful digital experiences
+                    with clean code and creative design. Currently exploring AI-driven
+                    software development and modern web technologies.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <span>Get In Touch</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-wrapper">
+                    <div class="hero-glow"></div>
+                    <div class="hero-avatar">
+                        <i class="fas fa-user-astronaut"></i>
+                    </div>
+                    <div class="orbit-ring orbit-1">
+                        <div class="orbit-dot"><i class="fab fa-html5"></i></div>
+                    </div>
+                    <div class="orbit-ring orbit-2">
+                        <div class="orbit-dot"><i class="fab fa-css3-alt"></i></div>
+                    </div>
+                    <div class="orbit-ring orbit-3">
+                        <div class="orbit-dot"><i class="fab fa-js-square"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" id="scrollIndicator">
+            <div class="mouse">
+                <div class="mouse-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header" data-animate>
+                <span class="section-tag">&lt;about&gt;</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                <p class="section-subtitle">Get to know who I am and what drives me</p>
+            </div>
+            <div class="about-grid" data-animate>
+                <div class="about-image-col">
+                    <div class="about-card glass-card">
+                        <div class="about-avatar-large">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="about-info-chips">
+                            <span class="chip"><i class="fas fa-map-marker-alt"></i> India</span>
+                            <span class="chip"><i class="fas fa-graduation-cap"></i> SCETW</span>
+                            <span class="chip"><i class="fas fa-code"></i> Developer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content-col">
+                    <div class="about-text">
+                        <h3>A Developer Who Loves to Create</h3>
+                        <p>
+                            I'm a passionate student and developer with a deep interest in building
+                            software that makes a difference. My journey in tech started with curiosity
+                            and has evolved into a full-fledged passion for crafting elegant digital solutions.
+                        </p>
+                        <p>
+                            I specialize in full-stack web development and am currently exploring
+                            AI-driven software development. I believe in writing clean, maintainable
+                            code and creating user experiences that delight.
+                        </p>
+                    </div>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <span class="detail-label">Email</span>
+                                <span class="detail-value">rkjay@example.com</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-university"></i>
+                            <div>
+                                <span class="detail-label">Education</span>
+                                <span class="detail-value">SCETW, Hyderabad</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <span class="detail-label">Focus</span>
+                                <span class="detail-value">Web Dev & AI,IOT</span>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-globe"></i>
+                            <div>
+                                <span class="detail-label">Languages</span>
+                                <span class="detail-value">English, Hindi, Telugu</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Let's Connect</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header" data-animate>
+                <span class="section-tag">&lt;skills&gt;</span>
+                <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+                <p class="section-subtitle">Technologies and tools I work with</p>
+            </div>
+            <div class="skills-tabs" data-animate>
+                <button class="skill-tab active" data-tab="frontend">Frontend</button>
+                <button class="skill-tab" data-tab="backend">Backend</button>
+                <button class="skill-tab" data-tab="tools">Tools</button>
+            </div>
+            <div class="skills-content" data-animate>
+                <div class="skills-panel active" id="panel-frontend">
+                    <div class="skills-grid">
+                        <div class="skill-card glass-card" data-skill="90">
+                            <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                            <h4>HTML5</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--skill-level: 90%"></div>
+                            </div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-card glass-card" data-skill="85">
+                            <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                            <h4>CSS3</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--skill-level: 85%"></div>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-card glass-card" data-skill="80">
+                            <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+                            <h4>JavaScript</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--skill-level: 80%"></div>
+                            </div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-panel" id="panel-backend">
+                    <div class="skills-grid">
+                        <div class="skill-card glass-card" data-skill="80">
+                            <div class="skill-icon"><i class="fab fa-python"></i></div>
+                            <h4>Python</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--skill-level: 80%"></div>
+                            </div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-card glass-card" data-skill="70">
+                            <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+                            <h4>Node.js</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--skill-level: 70%"></div>
+                            </div>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="skill-card glass-card" data-skill="65">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <h4>C</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--skill-level: 65%"></div>
+                            </div>
+                            <span class="skill-percent">65%</span>
+                        </div>
+                        <div class="skill-card glass-card" data-skill="60">
+                            <div class="skill-icon"><i class="fas fa-server"></i></div>
+                            <h4>JAVA</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--skill-level: 60%"></div>
+                            </div>
+                            <span class="skill-percent">60%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-panel" id="panel-tools">
+                    <div class="skills-grid">
+                        <div class="skill-card glass-card" data-skill="85">
+                            <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                            <h4>Git & GitHub</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--skill-level: 85%"></div>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-card glass-card" data-skill="75">
+                            <div class="skill-icon"><i class="fab fa-figma"></i></div>
+                            <h4>Figma</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--skill-level: 75%"></div>
+                            </div>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-card glass-card" data-skill="70">
+                            <div class="skill-icon"><i class="fas fa-terminal"></i></div>
+                            <h4>VS Code / CLI</h4>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--skill-level: 70%"></div>
+                            </div>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header" data-animate>
+                <span class="section-tag">&lt;contact&gt;</span>
+                <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                <p class="section-subtitle">Have a project in mind? Let's work together!</p>
+            </div>
+            <div class="contact-grid" data-animate>
+                <div class="contact-info">
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <h4>Email</h4>
+                        <p>rkjay@example.com</p>
+                    </div>
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h4>Location</h4>
+                        <p>India</p>
+                    </div>
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <h4>Phone</h4>
+                        <p>+91 XXXXX XXXXX</p>
+                    </div>
+                    <div class="contact-socials">
+                        <h4>Follow Me</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form glass-card" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="formName" placeholder=" " required>
+                        <label for="formName">Your Name</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="formEmail" placeholder=" " required>
+                        <label for="formEmail">Your Email</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="formSubject" placeholder=" " required>
+                        <label for="formSubject">Subject</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="formMessage" rows="5" placeholder=" " required></textarea>
+                        <label for="formMessage">Your Message</label>
+                        <span class="form-line"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                    <div class="form-status" id="formStatus"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#hero" class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>Jayani<span class="logo-bracket"> /&gt;</span>
+                </a>
+                <p class="footer-text">Designed & Built with <i class="fas fa-heart" style="color: #ef4444;"></i> by
+                    Jayani</p>
+                <p class="footer-tags">#pantechelearning #svnit #guhan #vibecodingproject #aidrivensoftwaredevelopment
+                </p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+                <p class="footer-copy">&copy; 2026 Jayani. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
